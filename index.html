@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Počítadlo známek - vypočítad průměr</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/custom.css">
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="load.html">Hlavní strana <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Moje známky</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Vypočítat průměr</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="">Coming soon</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="tabulka" >
+      <table class="table table-hover table-dark table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Předmět</th>
+            <th scope="col">Váha 1</th>
+            <th scope="col">Váha 2</th>
+            <th scope="col">Váha 3</th>
+            <th scope="col">Váha 4</th>
+            <th scope="col">Váha 5</th>
+            <th scope="col">Průměr</th>
+            <th scope="col">Nový průměr</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Matematika</th>
+            <td id="matematika-v1"></td>
+            <td id="matematika-v2"></td>
+            <td id="matematika-v3"></td>
+            <td id="matematika-v4"></td>
+            <td id="matematika-v5"></td>
+            <td id="matematika-prumer"></td>
+            <td id="matematika-prumer-novy"></td>
+          </tr>
+          <tr>
+            <th scope="row">Čeština</th>
+            <td id="cestina-v1"></td>
+            <td id="cestina-v2"></td>
+            <td id="cestina-v3"></td>
+            <td id="cestina-v4"></td>
+            <td id="cestina-v5"></td>
+            <td id="cestina-prumer"></td>
+            <td id="cestina-prumer-novy"></td>
+          </tr>
+          <tr>
+            <th scope="row">Angličtina</th>
+            <td id="ajina-v1"></td>
+            <td id="ajina-v2"></td>
+            <td id="ajina-v3"></td>
+            <td id="ajina-v4"></td>
+            <td id="ajina-v5"></td>
+            <td id="ajina-prumer"></td>
+            <td id="ajina-prumer-novy"></td>
+          </tr>
+          <tr>
+            <th scope="row">Němčina</th>
+            <td id="nemina-v1"></td>
+            <td id="nemina-v2"></td>
+            <td id="nemina-v3"></td>
+            <td id="nemina-v4"></td>
+            <td id="nemina-v5"></td>
+            <td id="nemina-prumer"></td>
+            <td id="nemina-prumer-novy"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Upravit známky</button>
+      <button type="button" class="btn btn-outline-danger"  onclick="cancel()">Obnovit</button>
+    </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upravit známky</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="formular">
+            <select id="valZnamka">
+              <option selected>Známka</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <select id="valVaha">
+              <option selected>Váha</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <select id="valPredmet">
+              <option selected>Předmět</option>
+              <option value="0">Matematika</option>
+              <option value="1">Čeština</option>
+              <option value="2">Angličtina</option>
+              <option value="3">Němčina</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Zavřít</button>
+          <button type="button" class="btn btn-success" onclick="formular()">Přidat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
+<script src="./js/custom.js"></script>
