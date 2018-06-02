@@ -24,7 +24,7 @@
             <a class="nav-link" href="index.html">Vypočítat průměr</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="">Coming soon</a>
+            <a class="nav-link disabled" href="info.html">Coming soon</a>
           </li>
         </ul>
       </div>
@@ -54,36 +54,6 @@
             <td id="matematika-prumer"></td>
             <td id="matematika-prumer-novy"></td>
           </tr>
-          <!-- <tr>
-            <th scope="row">Čeština</th>
-            <td id="cestina-v1"></td>
-            <td id="cestina-v2"></td>
-            <td id="cestina-v3"></td>
-            <td id="cestina-v4"></td>
-            <td id="cestina-v5"></td>
-            <td id="cestina-prumer"></td>
-            <td id="cestina-prumer-novy"></td>
-          </tr>
-          <tr>
-            <th scope="row">Angličtina</th>
-            <td id="ajina-v1"></td>
-            <td id="ajina-v2"></td>
-            <td id="ajina-v3"></td>
-            <td id="ajina-v4"></td>
-            <td id="ajina-v5"></td>
-            <td id="ajina-prumer"></td>
-            <td id="ajina-prumer-novy"></td>
-          </tr>
-          <tr>
-            <th scope="row">Němčina</th>
-            <td id="nemina-v1"></td>
-            <td id="nemina-v2"></td>
-            <td id="nemina-v3"></td>
-            <td id="nemina-v4"></td>
-            <td id="nemina-v5"></td>
-            <td id="nemina-prumer"></td>
-            <td id="nemina-prumer-novy"></td>
-          </tr> -->
         </tbody>
       </table>
     </div>
@@ -118,18 +88,15 @@
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
-            <!-- <select id="valPredmet">
-              <option selected>Předmět</option>
-              <option value="0">Matematika</option>
-              <option value="1">Čeština</option>
-              <option value="2">Angličtina</option>
-              <option value="3">Němčina</option>
-            </select> -->
+          </div>
+          <div class="txt">
+            <p>Právě se chystáš přidat známky: <span id="znam"></spam></p>
           </div>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="zobrazeniZnamek()">Přidat</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Zavřít</button>
-          <button type="button" class="btn btn-success" onclick="formular()">Přidat</button>
+          <button type="button" class="btn btn-success" onclick="formular()" data-dismiss="modal">Uložit a zavřít</button>
         </div>
       </div>
     </div>
