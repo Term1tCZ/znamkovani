@@ -1,4 +1,4 @@
-var matematika = [];
+var subject = [];
 
 function pocitadloPredmetu(predmet) {
   var soucet = 0;
@@ -18,48 +18,48 @@ function pocitadloPredmetu(predmet) {
   return "";
 }
 
-function vypisZnamekmatematika() {
+function vypisZnameksubject() {
   var vypis = ["", "", "", "", ""]
 
-  for (var i = 0; i < matematika.length; i++) {
-    switch (matematika[i][1]) {
+  for (var i = 0; i < subject.length; i++) {
+    switch (subject[i][1]) {
       case 1:
-        vypis[0] = vypis[0] + matematika[i][0] + " ";
+        vypis[0] = vypis[0] + subject[i][0] + " ";
         break;
       case 2:
-        vypis[1] = vypis[1] + matematika[i][0] + " ";
+        vypis[1] = vypis[1] + subject[i][0] + " ";
         break;
       case 3:
-        vypis[2] = vypis[2] + matematika[i][0] + " ";
+        vypis[2] = vypis[2] + subject[i][0] + " ";
         break;
       case 4:
-        vypis[3] = vypis[3] + matematika[i][0] + " ";
+        vypis[3] = vypis[3] + subject[i][0] + " ";
         break;
       case 5:
-        vypis[4] = vypis[4] + matematika[i][0] + " ";
+        vypis[4] = vypis[4] + subject[i][0] + " ";
         break;
       default:
 
     }
  }
 
-  document.getElementById("matematika-v1").innerHTML = vypis[0];
-  document.getElementById("matematika-v2").innerHTML = vypis[1];
-  document.getElementById("matematika-v3").innerHTML = vypis[2];
-  document.getElementById("matematika-v4").innerHTML = vypis[3];
-  document.getElementById("matematika-v5").innerHTML = vypis[4];
+  document.getElementById("subject-v1").innerHTML = vypis[0];
+  document.getElementById("subject-v2").innerHTML = vypis[1];
+  document.getElementById("subject-v3").innerHTML = vypis[2];
+  document.getElementById("subject-v4").innerHTML = vypis[3];
+  document.getElementById("subject-v5").innerHTML = vypis[4];
 }
-vypisZnamekmatematika();
-document.getElementById("matematika-prumer").innerHTML = pocitadloPredmetu(matematika);
+vypisZnameksubject();
+document.getElementById("subject-prumer").innerHTML = pocitadloPredmetu(subject);
 
 
 function formular() {
     var znamka = parseInt(document.getElementById("valZnamka").value);
     var vaha = parseInt(document.getElementById("valVaha").value);
     // var predmet = parseInt(document.getElementById("valPredmet").value);
-      matematika.push([znamka, vaha]);
-      document.getElementById("matematika-prumer-novy").innerHTML = pocitadloPredmetu(matematika);
-      vypisZnamekmatematika();
+      subject.push([znamka, vaha]);
+      document.getElementById("subject-prumer-novy").innerHTML = pocitadloPredmetu(subject);
+      vypisZnameksubject();
 }
 
 function cancel() {
@@ -72,7 +72,25 @@ function cancel() {
 function zobrazeniZnamek() {
   var znamka = parseInt(document.getElementById("valZnamka").value);
   var vaha = parseInt(document.getElementById("valVaha").value);
-  document.getElementById("znam").innerHTML = znamka + " [" + vaha + "]" + ", ";
+  document.getElementById("znam").innerHTML = znamka + " [" + vaha + "]" + ", " + "";
   console.log(znamka);
   console.log(vaha);
 }
+
+function realCas() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkCas(m);
+    s = checkCas(s);
+    document.getElementById('cas').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(realCas, 500);
+}
+realCas();
+function checkCas(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+checkCas();

@@ -468,3 +468,21 @@ function cancel() {
         location.reload();
     }
 }
+
+function realCas() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkCas(m);
+    s = checkCas(s);
+    document.getElementById('cas').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(realCas, 500);
+}
+realCas();
+function checkCas(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+checkCas();
