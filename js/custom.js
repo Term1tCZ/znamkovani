@@ -53,7 +53,6 @@ function vypisZnameksubject() {
 vypisZnameksubject();
 document.getElementById("subject-prumer").innerHTML = pocitadloPredmetu(subject);
 
-
 function formular() {
     console.log("pred zob",zobrazeni);
     console.log("pred sub",subject);
@@ -112,8 +111,6 @@ function odebrat() {
 
 }
 
-
-
 function realCas() {
     var today = new Date();
     var h = today.getHours();
@@ -121,13 +118,24 @@ function realCas() {
     var s = today.getSeconds();
     m = checkCas(m);
     s = checkCas(s);
-    document.getElementById('cas').innerHTML =
-    h + ":" + m + ":" + s;
-    var t = setTimeout(realCas, 500);
+    document.getElementById('cas').innerHTML = h + ":" + m + ":" + s;
+    var t = setTimeout(realCas, 1000);
+    //return  h + ":" + m + ":" + s;
 }
 realCas();
+
 function checkCas(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
 checkCas();
+
+function datum() {
+  var datum = new Date();
+  var den = new Date();
+  var mesice = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"];
+  var vyslednyStinng = "";
+  vyslednyStinng = den.getDate() + ".&nbsp;" + mesice[datum.getMonth()] + "&nbsp;";
+  document.getElementById("datum").innerHTML = vyslednyStinng;
+}
+datum();
