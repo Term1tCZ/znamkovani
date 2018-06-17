@@ -1,4 +1,5 @@
 var subject = [];
+var zobrazeni = [];
 
 function pocitadloPredmetu(predmet) {
   var soucet = 0;
@@ -54,10 +55,12 @@ document.getElementById("subject-prumer").innerHTML = pocitadloPredmetu(subject)
 
 
 function formular() {
-    var znamka = parseInt(document.getElementById("valZnamka").value);
-    var vaha = parseInt(document.getElementById("valVaha").value);
-    // var predmet = parseInt(document.getElementById("valPredmet").value);
-      subject.push([znamka, vaha]);
+    console.log("pred zob",zobrazeni);
+    console.log("pred sub",subject);
+      subject = subject.concat(zobrazeni);
+      console.log("zobrazeni", zobrazeni);
+      console.log("predmet",subject);
+      // subject.push([znamka, vaha]);
       document.getElementById("subject-prumer-novy").innerHTML = pocitadloPredmetu(subject);
       vypisZnameksubject();
 }
@@ -69,13 +72,47 @@ function cancel() {
     }
 }
 
+function znamkyNaObrazovku() {
+  var zobrazeniSting = "";
+  zobrazeni.forEach(
+    function(element) {
+      zobrazeniSting = zobrazeniSting + element[0] + " [" + element[1] + "], ";
+    }
+  );
+
+  document.getElementById("zobrazit").innerHTML = zobrazeniSting;
+}
+
 function zobrazeniZnamek() {
   var znamka = parseInt(document.getElementById("valZnamka").value);
   var vaha = parseInt(document.getElementById("valVaha").value);
-  document.getElementById("znam").innerHTML = znamka + " [" + vaha + "]" + ", " + "";
   console.log(znamka);
-  console.log(vaha);
+  var element = document.getElementById("butPridat");
+
+  if (znamka == 0 || vaha == 0 ) {
+    //element.classList.add("disabled");
+  } else {
+    //element.classList.remove("disabled");
+    zobrazeni.push([znamka, vaha]);
+    znamkyNaObrazovku();
+  }
+
+
 }
+
+function obnovit() {
+  zobrazeni.length = 0;
+  document.getElementById("zobrazit").innerHTML = "";
+}
+
+function odebrat() {
+  zobrazeni.pop();
+  console.log('po odebrani', zobrazeni);
+  znamkyNaObrazovku();
+
+}
+
+
 
 function realCas() {
     var today = new Date();

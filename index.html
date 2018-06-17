@@ -74,7 +74,7 @@
         <div class="modal-body">
           <div class="formular">
             <select id="valZnamka">
-              <option selected>Známka</option>
+              <option value="0">Známka</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -82,7 +82,7 @@
               <option value="5">5</option>
             </select>
             <select id="valVaha">
-              <option selected>Váha</option>
+              <option value="0">Váha</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -91,13 +91,14 @@
             </select>
           </div>
           <div class="txt">
-            <p>Právě se chystáš přidat známky: <span id="znam"></spam></p>
+            <p>Právě se chystáš přidat známky: <span id="zobrazit"></spam></p>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="zobrazeniZnamek()">Přidat</button>
-          <button type="button" class="btn btn-success" onclick="formular()" data-dismiss="modal">Uložit a zavřít</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Zavřít</button>
+          <button type="button" class="btn btn-primary" id="butPridat" onclick="zobrazeniZnamek()">Přidat</button>
+          <button type="button" class="btn btn-primary" onclick="odebrat()">Odebrat</button>
+          <button type="button" class="btn btn-success" onclick="formular()"  data-dismiss="modal">Uložit a zavřít</button>
+          <button type="button" class="btn btn-danger" onclick="obnovit()" data-dismiss="modal">Zavřít</button>
         </div>
       </div>
     </div>
