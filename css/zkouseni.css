@@ -1,0 +1,19 @@
+.zkouseni {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+
+.mezera {
+  margin-bottom: 40px;
+}
+
+.txt {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.na {
+  cursor: not-allowed;
+}

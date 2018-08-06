@@ -1,3 +1,7 @@
+body {
+  cursor: wait;
+}
+
 #loader {
   position: absolute;
   left: 50%;
@@ -48,3 +52,5 @@
   display: none;
   text-align: center;
 }
+
+.wait {cursor: wait;}

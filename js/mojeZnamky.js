@@ -1,15 +1,45 @@
-var cestina = [[2,2],[2,2],[3,2],[5,2],[2,3],[2,3],[1,2],[1,2],[2,2],[1,3],[3,3],[2,3],[2,2],[2,3]];
-var matematika = [[1,1],[1,1],[1,1],[1,3],[1,3],[2,3],[3,3],[2,3],[4,3],[1,3],[1,3],[1,3],[1,3],[1,3],[1,3],[1,3],[1,3],[2,5],[1,3],[1,3],[2,3]];
-var ajina = [[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,2],[3,2],[2,2],[2,2],[1,2],[1,4],[2,4],[1,4],[1,4],[1,1]];
-var nemina = [[1,1],[1,3],[1,3],[1,4],[1,4],[1,2],[1,3],[1,3],[1,5]];
-var zemak = [[2,3],[1,2],[2,4],[1,5],[1,3]];
-var obcanka = [[1,5],[1,4],[1,4],[1,4]];
-var dejak = [[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[2,2],[1,3],[2,3],[1,1],[1,2],[1,3]];
-var fyzika = [[1,1],[1,1],[2,1],[1,1],[1,1],[2,1],[2,1],[1,1],[2,1],[2,2],[1,3],[1,3],[1,3],[1,2],[1,5]];
-var chemie = [[1,1],[1,2],[1,2],[3,2],[4,3],[1,3],[2,3],[1,2],[1,3],[1,5]];
-var biola = [[1,3],[2,3],[2,3],[2,3],[1,3],[1,3],[1,3]];
-var ivt = [[1,3],[2,3],[1,5],[1,3],[1,5]];
+var cestina = [[,]];
+var matematika = [[,]];
+var ajina = [[,]];
+var nemina = [[,]];
+var zemak = [[,]];
+var obcanka = [[,]];
+var dejak = [[,]];
+var fyzika = [[,]];
+var chemie = [[,]];
+var biola = [[,]];
+var ivt = [[,]];
 //znamka, vaha
+
+
+// function nactiZnamky(rok, predmet) {
+// //načte známky z db a vrátí je v 3D Array: znamka | vaha | ID
+//
+//     var cesta = rok + "/" + predmet;
+//     let znamkaRef = firebase.database().ref(cesta);
+//     let poleZnamek = [ [, ] ];
+//
+//     znamkaRef.on('child_added', function (data, prevChildKey) {
+//        let newZnamka = data.val();
+//        poleZnamek.push([newZnamka.znamka, newZnamka.vaha ])
+//        // poleZnamek[0].push(newZnamka.znamka);
+//        // poleZnamek[1].push(newZnamka.vaha);
+//        // poleZnamek[2].push(data.key)
+//     });
+//
+//
+//     return poleZnamek;
+// }
+//
+// const ROK = '2018p2';
+// const PREDMET = 'cej';
+// let p = nactiZnamky(ROK, PREDMET);
+// console.log("pole znamek", p);
+// console.log("cestina", cestina);
+// var children = p.concat(cestina);
+// console.log("children", children);
+
+
 
 function pocitadloPredmetu(predmet) {
   var soucet = 0;
@@ -62,7 +92,7 @@ document.getElementById("matematika-prumer").innerHTML = pocitadloPredmetu(matem
 
 function vypisZnamekcestina() {
   var vypis = ["", "", "", "", ""]
-
+  console.log(cestina.length);
   for (var i = 0; i < cestina.length; i++) {
     switch (cestina[i][1]) {
       case 1:
@@ -84,7 +114,7 @@ function vypisZnamekcestina() {
 
     }
  }
-
+console.log(cestina);
   document.getElementById("cestina-v1").innerHTML = vypis[0];
   document.getElementById("cestina-v2").innerHTML = vypis[1];
   document.getElementById("cestina-v3").innerHTML = vypis[2];
