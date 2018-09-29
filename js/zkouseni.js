@@ -62,25 +62,45 @@ function test() {
     document.getElementById("demo2").innerHTML = "";
   }
   if ((!check1)  && (check2) && (!check3)) {
-    var t = (inp3 / inp1) * 100;
-    var t1 = Math.round(t * 100) / 100;
-    if (t1 <= 33) {
+    if (inp3 == 0) {
+      var t = (1 / inp1) * 100;
+      var t1 = Math.round(t * 100) / 100;
+      console.log("t", t, " t1 ", t1);
       document.getElementById("vidim").style.visibility = "visible";
       document.getElementById("demo").innerHTML = t1 + "%";
       document.getElementById("demo1").innerHTML = "";
       document.getElementById("demo2").innerHTML = "";
+      console.log("ahoj");
     }
-    if ((t1 <= 70) && (t1 > 34)) {
-      document.getElementById("vidim").style.visibility = "visible";
-      document.getElementById("demo1").innerHTML = t1 + "%";
-      document.getElementById("demo").innerHTML = "";
-      document.getElementById("demo2").innerHTML = "";
-    }
-    if (t1 > 70) {
-      document.getElementById("vidim").style.visibility = "visible";
-      document.getElementById("demo2").innerHTML = t1 + "%";
-      document.getElementById("demo1").innerHTML = "";
-      document.getElementById("demo").innerHTML = "";
+    if (inp3 == inp1) {
+      var t = (1 / inp1) * 100;
+      var t1 = Math.round(t * 100) / 100;
+      console.log("t", t, " t1 ", t1);
+      // document.getElementById("vsichni").style.visibility = "visible";
+      alert("vsichni uz byli")
+      console.log("ahoj");
+    } else {
+      var y;
+      var t = ((inp3 + 1) / inp1) * 100;
+      var t1 = Math.round(t * 100) / 100;
+      if (t1 <= 33) {
+        document.getElementById("vidim").style.visibility = "visible";
+        document.getElementById("demo").innerHTML = t1 + "%";
+        document.getElementById("demo1").innerHTML = "";
+        document.getElementById("demo2").innerHTML = "";
+      }
+      if ((t1 <= 70) && (t1 > 34)) {
+        document.getElementById("vidim").style.visibility = "visible";
+        document.getElementById("demo1").innerHTML = t1 + "%";
+        document.getElementById("demo").innerHTML = "";
+        document.getElementById("demo2").innerHTML = "";
+      }
+      if (t1 > 70) {
+        document.getElementById("vidim").style.visibility = "visible";
+        document.getElementById("demo2").innerHTML = t1 + "%";
+        document.getElementById("demo1").innerHTML = "";
+        document.getElementById("demo").innerHTML = "";
+      }
     }
     uzSkoroval = true;
   }

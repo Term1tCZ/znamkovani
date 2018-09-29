@@ -17,6 +17,6 @@ function validateForm() {
 }
 
 function back() {
-  window.location.replace("uvod.html"); 
+   window.history.back();
 
 }

@@ -8,7 +8,7 @@
  padding: 30px 38px 66px;
  margin: 0 auto;
  background-color: #eee;
- border: 3px dotted rgba(0,0,0,0.1);
+ border: 3px dotted rgba(110,110,110,1);
  }
 
 .form-signin-heading {
@@ -40,10 +40,10 @@ input[type="password"] {
  border-top: 0;
  background: #c4e17f;
  border-radius: 5px;
- background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
- background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
- background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
- background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+ background-image: -webkit-linear-gradient(left, #222222, #222222 12.5%, #ff1500 12.5%, #ff1500 25%, #222222 25%, #222222 37.5%, #ff1500 37.5%, #ff1500 50%, #222222 50%, #222222 62.5%, #ff1500 62.5%, #ff1500 75%, #222222 75%, #222222 87.5%, #ff1500 87.5%, #ff1500);
+ background-image: -moz-linear-gradient(left, #222222, #222222 12.5%, #ff1500 12.5%, #ff1500 25%, #222222 25%, #222222 37.5%, #ff1500 37.5%, #ff1500 50%, #222222 50%, #222222 62.5%, #ff1500 62.5%, #ff1500 75%, #222222 75%, #222222 87.5%, #ff1500 87.5%, #ff1500);
+ background-image: -o-linear-gradient(left, #222222, #222222 12.5%, #ff1500 12.5%, #ff1500 25%, #222222 25%, #222222 37.5%, #ff1500 37.5%, #ff1500 50%, #222222 50%, #222222 62.5%, #ff1500 62.5%, #ff1500 75%, #222222 75%, #222222 87.5%, #ff1500 87.5%, #ff1500);
+ background-image: linear-gradient(to right, #222222, #222222 12.5%, #ff1500 12.5%, #ff1500 25%, #222222 25%, #222222 37.5%, #ff1500 37.5%, #ff1500 50%, #222222 50%, #222222 62.5%, #ff1500 62.5%, #ff1500 75%, #222222 75%, #222222 87.5%, #ff1500 87.5%, #ff1500);
 }
 
 .falseLog {

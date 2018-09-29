@@ -32,80 +32,85 @@
       </div>
       <div id="datum" class="text-white"></div>
         <div id="cas" class="text-white"></div>
-  </nav>
-  <div class="zkouseni">
-    <form id="form" method="post">
-      <div class="mezera">
-        <div class="row">
-          <div class="col">
+    </nav>
+
+    <div class="mojeZontainer">
+        <form id="form" method="post">
+          <div class="row">
+            <div class="col-4">
               <p class="txt">Počet lidí ve třídě:</p>
-              <!-- <label for="pocet">Počet lidí ve třídě:</label> -->
-              <input type="text" name="f" class="form-control" id="pocet" placeholder="Zadej počet lidí ve třídě" value="" onfocusout="myFunction()">
-              <!-- <label for="cislo">Tvoje číslo v seznamu:</label> -->
+              <input type="text" name="f" class="form-control" id="pocet" placeholder="Zadej počet lidí ve třídě" value="31" onfocusout="myFunction()">
             </div>
-            <div class="col">
+            <div class="col-4">
               <p class="txt"="txt">Tvoje číslo v seznamu:</p>
               <input type="text" name="f1" class="form-control" id="cislo" placeholder="Zadej tvoje číslo v seznamu" value="" onfocusout="myFunction()">
-              <!-- <label for="cislo">Kolik lidí už bylo vyzkoušených?</label> -->
+            </div>
+            <div class="col-4">
+              <p class="txt"="txt">Kolik lidí už bylo vyzkoušených?</p>
+              <input type="text" name="f2" class="form-control" id="vyzkouseni" placeholder="Zadej počet vyzkoušených lidí" value="0" onfocusout="myFunction()"><br><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                    <p>Byl jsi už zkoušený?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-info active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked value=""> Ano
+                      </label>
+                      <label class="btn btn-info">
+                        <input type="radio" name="options" id="option2" autocomplete="off" value=""> Ne
+                      </label>
+                    </div>
             </div>
             <div class="col">
-              <p class="txt"="txt">Kolik lidí už bylo vyzkoušených?</p>
-              <input type="text" name="f2" class="form-control" id="vyzkouseni" placeholder="Zadej počet vyzkoušených lidí" value="" onfocusout="myFunction()"><br><br>
+                    <p>Můžeš být zkoušený víckrát?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-info active">
+                        <input type="radio" name="optionsB" id="option3" autocomplete="off" checked value=""> Ano
+                      </label>
+                      <label class="btn btn-info">
+                        <input type="radio" name="optionsB" id="option4" autocomplete="off" value=""> Ne
+                      </label>
+                    </div>
             </div>
-        </div>
-     </div>
-    <div class="mezera">
-      <div class="row">
-        <div class="col">
-                <p>Byl jsi už zkoušený?</p>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-info active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked value=""> Ano
-                  </label>
-                  <label class="btn btn-info">
-                    <input type="radio" name="options" id="option2" autocomplete="off" value=""> Ne
-                  </label>
-                </div>
-        </div>
-        <div class="col">
-                <p>Můžeš být zkoušený víckrát?</p>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-info active">
-                    <input type="radio" name="optionsB" id="option3" autocomplete="off" checked value=""> Ano
-                  </label>
-                  <label class="btn btn-info">
-                    <input type="radio" name="optionsB" id="option4" autocomplete="off" value=""> Ne
-                  </label>
-                </div>
-        </div>
-        <div class="col">
-                <p>Zkouší učitel podle data?</p>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-info active">
-                    <input type="radio" name="optionsC" id="option5" autocomplete="off" checked value=""> Ano
-                  </label>
-                  <label class="btn btn-info">
-                    <input type="radio" name="optionsC" id="option6" autocomplete="off" value=""> Ne
-                  </label>
-                </div>
+            <div class="col">
+                    <p>Zkouší učitel podle data?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-info active">
+                        <input type="radio" name="optionsC" id="option5" autocomplete="off" checked value=""> Ano
+                      </label>
+                      <label class="btn btn-info">
+                        <input type="radio" name="optionsC" id="option6" autocomplete="off" value=""> Ne
+                      </label>
+                    </div>
+            </div>
+          </div>
+      </form>
+      <div class="odpoved">
+        <div class="row">
+          <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-info" onclick="test()" id="dis">Vypočítat</button>
+              <button type="button" class="btn btn-danger"  onclick="cancel()">Obnovit</button>
+            </div>
+          </div>
+          <div class="col col-lg-8">
+              <h1 id="vidim">Máš <span class="bg-success text-white" style="cursor" id="demo"></span>
+                <span class="bg-warning text-white" id="demo1"></span>
+                <span class="bg-danger text-white" id="demo2"></span> šanci na zkoušení</h1>
+          </div>
         </div>
       </div>
+
+
+        <!-- <div class="alert">
+          <div class="alert alert-danger alert-dismissible">
+           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+           <strong>Pozor!</strong> Všichni už byli zkoušení.
+         </div>
+        </div> -->
     </div>
-    </form>
-    <div class="row">
-      <div class="col">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-info" onclick="test()" id="dis">Vypočítat</button>
-          <button type="button" class="btn btn-danger"  onclick="cancel()">Obnovit</button>
-        </div>
-      </div>
-      <div class="col col-lg-8">
-          <h1 id="vidim">Máš <span class="bg-success text-white" style="cursor" id="demo"></span>
-                  <span class="bg-warning text-white" id="demo1"></span>
-                  <span class="bg-danger text-white" id="demo2"></span> šanci na zkoušení</h1>
-      </div>
-    </div>
-  </div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
