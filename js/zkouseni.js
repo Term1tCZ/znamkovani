@@ -65,12 +65,10 @@ function test() {
     if (inp3 == 0) {
       var t = (1 / inp1) * 100;
       var t1 = Math.round(t * 100) / 100;
-      console.log("t", t, " t1 ", t1);
       document.getElementById("vidim").style.visibility = "visible";
       document.getElementById("demo").innerHTML = t1 + "%";
       document.getElementById("demo1").innerHTML = "";
       document.getElementById("demo2").innerHTML = "";
-      console.log("ahoj");
     }
     if (inp3 == inp1) {
       var t = (1 / inp1) * 100;
@@ -158,11 +156,19 @@ function test() {
       var plus = den + mesic;
       var minus1 = den - mesic;
       var minus2 = mesic - den;
+      console.log("s");
       if ((inp2 == den) || (inp2 == mesic) || (inp2 == nasobeni) || (inp2 == plus) || ((minus2 > 0) && (minus2 == inp2)) || ((minus1 > 0) && (minus1 == inp2))) {
           document.getElementById("vidim").style.visibility = "visible";
           document.getElementById("demo2").innerHTML = "100%";
           document.getElementById("demo1").innerHTML = "";
           document.getElementById("demo").innerHTML = "";
+          console.log("a");
+      }
+      else {
+        document.getElementById("vidim").style.visibility = "visible";
+        document.getElementById("demo2").innerHTML = "";
+        document.getElementById("demo1").innerHTML = "";
+        document.getElementById("demo").innerHTML = "0%";
       }
       uzSkoroval = true;
   }
@@ -179,6 +185,12 @@ function test() {
           document.getElementById("demo2").innerHTML = "100%";
           document.getElementById("demo1").innerHTML = "";
           document.getElementById("demo").innerHTML = "";
+      }
+      else {
+        document.getElementById("vidim").style.visibility = "visible";
+        document.getElementById("demo2").innerHTML = "";
+        document.getElementById("demo1").innerHTML = "";
+        document.getElementById("demo").innerHTML = "0%";
       }
       uzSkoroval = true;
   }
