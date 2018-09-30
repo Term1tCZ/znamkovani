@@ -17,3 +17,8 @@ ZKOUSENI:
   - hotovo
 
 - upraveny nejake chyby
+
+30/9/18
+
+ZKOUSENI:
+  - upraveny alerty

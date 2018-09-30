@@ -44,10 +44,10 @@ function test() {
   var check3 = x.elements[7].checked;
   var uzSkoroval = false;
   if (inp3 > inp1) {
-    alert("To je trochu blbost, ne?\nP.S. Zkontroluj si své údaje.")
+    document.getElementById("hide").style.visibility = "visible";
   }
   if (inp2 > inp1) {
-    alert("To je trochu blbost, ne?\nP.S. Zkontroluj si své údaje.")
+    document.getElementById("hide").style.visibility = "visible";
   }
   if ((check1) && (!check2) && (!check3)) {
     document.getElementById("vidim").style.visibility = "visible";
@@ -73,10 +73,8 @@ function test() {
     if (inp3 == inp1) {
       var t = (1 / inp1) * 100;
       var t1 = Math.round(t * 100) / 100;
-      console.log("t", t, " t1 ", t1);
       // document.getElementById("vsichni").style.visibility = "visible";
-      alert("vsichni uz byli")
-      console.log("ahoj");
+      document.getElementById("hide1").style.visibility = "visible";
     } else {
       var y;
       var t = ((inp3 + 1) / inp1) * 100;
@@ -156,13 +154,11 @@ function test() {
       var plus = den + mesic;
       var minus1 = den - mesic;
       var minus2 = mesic - den;
-      console.log("s");
       if ((inp2 == den) || (inp2 == mesic) || (inp2 == nasobeni) || (inp2 == plus) || ((minus2 > 0) && (minus2 == inp2)) || ((minus1 > 0) && (minus1 == inp2))) {
           document.getElementById("vidim").style.visibility = "visible";
           document.getElementById("demo2").innerHTML = "100%";
           document.getElementById("demo1").innerHTML = "";
           document.getElementById("demo").innerHTML = "";
-          console.log("a");
       }
       else {
         document.getElementById("vidim").style.visibility = "visible";
@@ -249,4 +245,6 @@ myFunction();
 
 function viditelnost() {
       document.getElementById("vidim").style.visibility = "hidden";
+      document.getElementById("hide").style.visibility = "hidden";
+      document.getElementById("hide1").style.visibility = "hidden";
 }
