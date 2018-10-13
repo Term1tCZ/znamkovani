@@ -36,9 +36,6 @@ function vypisZnameksubject() {
       case 4:
         vypis[3] = vypis[3] + subject[i][0] + " ";
         break;
-      case 5:
-        vypis[4] = vypis[4] + subject[i][0] + " ";
-        break;
       default:
 
     }
@@ -48,7 +45,6 @@ function vypisZnameksubject() {
   document.getElementById("subject-v2").innerHTML = vypis[1];
   document.getElementById("subject-v3").innerHTML = vypis[2];
   document.getElementById("subject-v4").innerHTML = vypis[3];
-  document.getElementById("subject-v5").innerHTML = vypis[4];
 }
 vypisZnameksubject();
 document.getElementById("subject-prumer").innerHTML = pocitadloPredmetu(subject);
@@ -139,3 +135,8 @@ function datum() {
   document.getElementById("datum").innerHTML = vyslednyStinng;
 }
 datum();
+
+function zavrit() {
+  document.getElementById("valVaha").value = "0";
+  document.getElementById("valZnamka").value = "0";
+}

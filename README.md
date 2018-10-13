@@ -22,3 +22,14 @@ ZKOUSENI:
 
 ZKOUSENI:
   - upraveny alerty
+
+13/10/18
+
+VYPOCITAT PRUMER:
+  - upraveny vahy
+  - upraveno select menu
+
+MOJE ZNAMKY:
+    - upraveny vahy
+    - upraveno select menu
+    - novy predmet

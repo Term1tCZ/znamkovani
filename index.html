@@ -36,11 +36,10 @@
         <thead>
           <tr>
             <th scope="col"></th>
-            <th scope="col">Váha 1</th>
-            <th scope="col">Váha 2</th>
-            <th scope="col">Váha 3</th>
-            <th scope="col">Váha 4</th>
-            <th scope="col">Váha 5</th>
+            <th scope="col">Váha 1 (0,25)</th>
+            <th scope="col">Váha 2 (0,5)</th>
+            <th scope="col">Váha 3 (0,75)</th>
+            <th scope="col">Váha 4 (1,0)</th>
             <th scope="col">Průměr</th>
             <th scope="col">Nový průměr</th>
           </tr>
@@ -52,7 +51,6 @@
             <td id="subject-v2"></td>
             <td id="subject-v3"></td>
             <td id="subject-v4"></td>
-            <td id="subject-v5"></td>
             <td id="subject-prumer"></td>
             <td id="subject-prumer-novy"></td>
           </tr>
@@ -84,21 +82,20 @@
             </select>
             <select id="valVaha">
               <option value="0">Váha</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
+              <option value="1">1 (0,25)</option>
+              <option value="2">2 (0,5)</option>
+              <option value="3">3 (0,75)</option>
+              <option value="4">4 (1,0)</option>
             </select>
           </div>
-          <div class="txt">
+          <div class="txt" id="modalTxt">
             <p>Právě se chystáš přidat známky: <span id="zobrazit"></spam></p>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" id="butPridat" onclick="zobrazeniZnamek()">Přidat</button>
           <button type="button" class="btn btn-primary" onclick="odebrat()">Odebrat</button>
-          <button type="button" class="btn btn-success" onclick="formular()"  data-dismiss="modal">Uložit a zavřít</button>
+          <button type="button" class="btn btn-success" onclick="formular(); obnovit(); zavrit()" data-dismiss="modal">Uložit a zavřít</button>
           <button type="button" class="btn btn-danger" onclick="obnovit()" data-dismiss="modal">Zavřít</button>
         </div>
       </div>
