@@ -140,3 +140,8 @@ function zavrit() {
   document.getElementById("valVaha").value = "0";
   document.getElementById("valZnamka").value = "0";
 }
+
+function vidimDatum() {
+  document.getElementById("datum").style.visibility = "hidden";
+  document.getElementById("cas").style.visibility = "hidden";
+}

@@ -248,3 +248,8 @@ function viditelnost() {
       document.getElementById("hide").style.visibility = "hidden";
       document.getElementById("hide1").style.visibility = "hidden";
 }
+
+function vidimDatum() {
+  document.getElementById("datum").style.visibility = "hidden";
+  document.getElementById("cas").style.visibility = "hidden";
+}

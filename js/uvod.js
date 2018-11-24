@@ -120,3 +120,8 @@ function datum() {
   document.getElementById("datum").innerHTML = vyslednyStinng;
 }
 datum();
+
+function vidimDatum() {
+  document.getElementById("datum").style.visibility = "hidden";
+  document.getElementById("cas").style.visibility = "hidden";
+}
