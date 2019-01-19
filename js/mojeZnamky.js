@@ -1,14 +1,14 @@
 var cestina = [[1,2], [2,2], [3,2]];
 var matematika = [[2,2],[2,2]];
-var ajina = [[1,1]];
-var nemina = [[1,2]];
-var zemak = [[1,2],[1,2]];
-var obcanka = [[,]];
-var dejak = [[,]];
-var fyzika = [[,]];
-var chemie = [[1,2]];
-var biola = [[1,2]];
-var ivt = [[,]];
+var ajina = [[1,1],[1,2],[1,2],[1,2]];
+var nemina = [[1,2],[1,2],[1,2],[4,2]];
+var zemak = [[1,2],[1,2],[2,2]];
+var obcanka = [[2,2],[3,2]];
+var dejak = [[1,2],[1,2],[2,2]];
+var fyzika = [[2,3],[1,2],[1,1]];
+var chemie = [[1,2],[5,2],[1,2],[1,2]];
+var biola = [[1,2], [2,2],[1,2],[1,2],[4,2]];
+var ivt = [[1,2], [1,2], [1,2], [1,2]];
 //znamka, vaha
 
 
