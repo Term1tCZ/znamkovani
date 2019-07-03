@@ -2,7 +2,7 @@
 
 
 
-28/9/18
+28/8/18
 
 LOGIN FORM:
   - upravena funkce back
@@ -11,7 +11,7 @@ LOGIN FORM:
 ZKOUSENI:
   - ne,ano,ne funguje, zbytek dodelat
 
-28/9/18
+21/9/18
 
 ZKOUSENI:
   - hotovo
@@ -23,7 +23,7 @@ ZKOUSENI:
 ZKOUSENI:
   - upraveny alerty
 
-13/10/18
+3/10/18
 
 VYPOCITAT PRUMER:
   - upraveny vahy
